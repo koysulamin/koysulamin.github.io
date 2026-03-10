@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koysul Amin-QA Engineer</title>
+    <title>Koysul Amin - AI-Powered QA Engineer</title>
     <link rel="shortcut icon" href="favicon.png" >
 
     <!-- Google Fonts for name styling -->
@@ -24,35 +24,35 @@
 
     <style>
         :root {
-            --primary: #10B981;
-            --primary-dark: #059669;
-            --secondary: #3B82F6;
-            --accent: #F59E0B;
-            --success: #22C55E;
+            --primary: #8B5CF6;
+            --primary-dark: #7C3AED;
+            --secondary: #06B6D4;
+            --accent: #10B981;
+            --success: #10B981;
             --warning: #EF4444;
-            --bg-dark: #0F172A;
-            --text-light: #FFFFFF;
-            --text-dim: #E2E8F0;
-            --text-muted: #CBD5E1;
-            --surface: #1E293B;
-            --surface-hover: #334155;
-            --border: #475569;
-            --glass-bg: rgba(16, 185, 129, 0.02);
-            --glass-border: rgba(16, 185, 129, 0.08);
-            --accent-glow: rgba(16, 185, 129, 0.1);
+            --bg-dark: #0C0A1A;
+            --text-light: #F1F5F9;
+            --text-dim: #CBD5E1;
+            --text-muted: #94A3B8;
+            --surface: #1A1832;
+            --surface-hover: #28254A;
+            --border: #3D3A6B;
+            --glass-bg: rgba(139, 92, 246, 0.02);
+            --glass-border: rgba(139, 92, 246, 0.08);
+            --accent-glow: rgba(139, 92, 246, 0.1);
         }
 
         /* Light mode variables */
         [data-theme="light"] {
-            --bg-dark: #F8FAFC;
-            --text-light: #0F172A;
+            --bg-dark: #FAF5FF;
+            --text-light: #1E1B4B;
             --text-dim: #475569;
             --text-muted: #64748B;
-            --surface: #E2E8F0;
-            --surface-hover: #CBD5E1;
-            --border: #CBD5E1;
-            --glass-bg: rgba(16, 185, 129, 0.02);
-            --glass-border: rgba(16, 185, 129, 0.08);
+            --surface: #EDE9FE;
+            --surface-hover: #DDD6FE;
+            --border: #C4B5FD;
+            --glass-bg: rgba(139, 92, 246, 0.03);
+            --glass-border: rgba(139, 92, 246, 0.1);
         }
 
         * {
@@ -63,7 +63,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0F172A 0%, #1E293B 25%, #334155 50%, #475569 75%, #64748B 100%);
+            background: linear-gradient(135deg, #0C0A1A 0%, #1A1145 25%, #1E1B3A 50%, #2D2455 75%, #1A1145 100%);
             color: var(--text-light);
             line-height: 1.6;
             padding: 0;
@@ -77,7 +77,7 @@
         }
 
         [data-theme="light"] body {
-            background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 25%, #E2E8F0 50%, #CBD5E1 75%, #94A3B8 100%);
+            background: linear-gradient(135deg, #FAF5FF 0%, #F5F3FF 25%, #EDE9FE 50%, #DDD6FE 75%, #C4B5FD 100%);
         }
 
         /* Theme toggle button */
@@ -105,7 +105,7 @@
 
         .theme-toggle:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(14, 165, 233, 0.3);
+            box-shadow: 0 6px 30px rgba(139, 92, 246, 0.3);
             border-color: var(--primary);
         }
 
@@ -132,8 +132,8 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
@@ -172,7 +172,7 @@
             background: var(--primary);
             border-color: var(--primary);
             transform: scale(1.6);
-            box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
         }
 
         /* Animated gradient border effect */
@@ -199,8 +199,8 @@
             right: -2px;
             bottom: -2px;
             background: linear-gradient(45deg,
-                #10B981, #059669, #22C55E, #3B82F6,
-                #10B981, #059669, #10B981);
+                #8B5CF6, #7C3AED, #06B6D4, #3B82F6,
+                #8B5CF6, #7C3AED, #8B5CF6);
             background-size: 400% 400%;
             border-radius: 20px;
             z-index: -1;
@@ -213,8 +213,47 @@
             animation: gradient-border 3s ease infinite;
         }
 
-        /* Particles container */
-        #particles-js {
+        /* Grid overlay - tech dashboard pattern */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+            background-size: 32px 32px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        [data-theme="light"] .grid-overlay {
+            background-image: radial-gradient(rgba(139, 92, 246, 0.08) 1px, transparent 1px);
+        }
+
+        /* Header scan line animation */
+        @keyframes scan {
+            0% { top: -100%; }
+            100% { top: 200%; }
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                rgba(139, 92, 246, 0.04) 40%,
+                rgba(6, 182, 212, 0.03) 60%,
+                transparent 100%);
+            animation: scan 6s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Circuit board container */
+        #circuit-board {
             position: fixed;
             width: 100%;
             height: 100%;
@@ -232,7 +271,7 @@
         }
 
         .glass {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(12, 10, 26, 0.6) 0%, rgba(26, 17, 69, 0.3) 100%);
             border: 1px solid var(--glass-border);
             border-radius: 20px;
             box-shadow:
@@ -250,7 +289,7 @@
             background: linear-gradient(135deg,
                 rgba(255, 255, 255, 0.008) 0%,
                 rgba(255, 255, 255, 0.003) 50%,
-                rgba(14, 165, 233, 0.01) 100%);
+                rgba(139, 92, 246, 0.01) 100%);
             border-radius: 24px;
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
@@ -287,7 +326,7 @@
             border-radius: 50%;
             margin: 0 auto 20px;
             border: 3px solid var(--primary);
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
             overflow: hidden;
             background-color: var(--surface);
         }
@@ -307,7 +346,7 @@
             letter-spacing: -0.02em;
             line-height: 1.1;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #CBD5E1 100%);
+            background: linear-gradient(135deg, #FFFFFF 0%, #DDD6FE 50%, #A5B4FC 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -321,7 +360,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            background: linear-gradient(135deg, var(--primary) 0%, #06B6D4 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -416,7 +455,7 @@
             box-shadow:
                 0 8px 24px 0 rgba(0, 0, 0, 0.3),
                 inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
-            border-color: rgba(14, 165, 233, 0.3);
+            border-color: rgba(139, 92, 246, 0.3);
         }
 
         .highlight-number {
@@ -435,7 +474,7 @@
             background: linear-gradient(135deg,
                 rgba(255, 255, 255, 0.008) 0%,
                 rgba(255, 255, 255, 0.003) 50%,
-                rgba(14, 165, 233, 0.01) 100%);
+                rgba(139, 92, 246, 0.01) 100%);
             border-radius: 24px;
             padding: 50px;
             text-align: center;
@@ -494,13 +533,13 @@
 
         .contact-links a:hover {
             background: linear-gradient(135deg,
-                rgba(14, 165, 233, 0.2) 0%,
-                rgba(14, 165, 233, 0.1) 100%);
+                rgba(139, 92, 246, 0.2) 0%,
+                rgba(139, 92, 246, 0.1) 100%);
             transform: translateY(-3px);
             box-shadow:
-                0 8px 24px 0 rgba(14, 165, 233, 0.3),
+                0 8px 24px 0 rgba(139, 92, 246, 0.3),
                 inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
-            border-color: rgba(14, 165, 233, 0.3);
+            border-color: rgba(139, 92, 246, 0.3);
         }
 
         .section-title {
@@ -522,9 +561,9 @@
             height: 4px;
             bottom: 0;
             left: 0;
-            background: linear-gradient(to right, var(--primary), transparent);
+            background: linear-gradient(to right, var(--primary), var(--secondary), transparent);
             border-radius: 2px;
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
         }
 
         .project-grid {
@@ -574,20 +613,20 @@
             transform: translateY(-10px);
             box-shadow:
                 0 12px 48px 0 rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(14, 165, 233, 0.2),
+                0 0 0 1px rgba(139, 92, 246, 0.2),
                 inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
-            border-color: rgba(14, 165, 233, 0.3);
+            border-color: rgba(139, 92, 246, 0.3);
         }
 
         .project-header {
             padding: 24px;
             background: linear-gradient(135deg,
-                rgba(14, 165, 233, 0.12) 0%,
-                rgba(14, 165, 233, 0.08) 50%,
-                rgba(2, 132, 199, 0.05) 100%);
+                rgba(139, 92, 246, 0.15) 0%,
+                rgba(6, 182, 212, 0.08) 50%,
+                rgba(16, 185, 129, 0.05) 100%);
             color: white;
             position: relative;
-            border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
         }
 
         .project-header::after {
@@ -599,7 +638,7 @@
             height: 1px;
             background: linear-gradient(90deg,
                 transparent 0%,
-                rgba(14, 165, 233, 0.3) 50%,
+                rgba(6, 182, 212, 0.3) 50%,
                 transparent 100%);
         }
 
@@ -654,7 +693,7 @@
 
         .project-footer {
             padding: 20px 24px;
-            background-color: rgba(15, 23, 42, 0.5);
+            background-color: rgba(12, 10, 26, 0.5);
             border-top: 1px solid var(--border);
         }
 
@@ -666,14 +705,14 @@
 
         .tech-tag {
             background: linear-gradient(135deg,
-                rgba(14, 165, 233, 0.15) 0%,
-                rgba(14, 165, 233, 0.08) 100%);
-            color: var(--primary);
+                rgba(139, 92, 246, 0.12) 0%,
+                rgba(6, 182, 212, 0.06) 100%);
+            color: #A78BFA;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-            border: 1px solid rgba(14, 165, 233, 0.25);
+            border: 1px solid rgba(139, 92, 246, 0.2);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             transition: all 0.3s ease;
@@ -681,10 +720,11 @@
 
         .tech-tag:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
             background: linear-gradient(135deg,
-                rgba(14, 165, 233, 0.2) 0%,
-                rgba(14, 165, 233, 0.1) 100%);
+                rgba(139, 92, 246, 0.2) 0%,
+                rgba(6, 182, 212, 0.1) 100%);
+            color: #C4B5FD;
         }
 
         .project-links {
@@ -725,7 +765,7 @@
                 inset 0 -1px 0 0 rgba(0, 0, 0, 0.02);
             transition: all 0.3s ease;
             background: linear-gradient(135deg,
-                rgba(15, 23, 42, 0.3) 0%,
+                rgba(12, 10, 26, 0.3) 0%,
                 rgba(30, 41, 59, 0.2) 50%,
                 rgba(255, 255, 255, 0.002) 100%);
             backdrop-filter: blur(5px);
@@ -764,8 +804,8 @@
             right: -1px;
             bottom: -1px;
             background: linear-gradient(45deg,
-                #10B981, #059669, #22C55E, #3B82F6,
-                #10B981, #059669, #10B981);
+                #8B5CF6, #7C3AED, #06B6D4, #3B82F6,
+                #8B5CF6, #7C3AED, #8B5CF6);
             background-size: 400% 400%;
             border-radius: 20px;
             z-index: -1;
@@ -795,13 +835,13 @@
             transform: translateY(-5px);
             box-shadow:
                 0 12px 48px 0 rgba(0, 0, 0, 0.15),
-                0 0 0 1px rgba(14, 165, 233, 0.1),
+                0 0 0 1px rgba(139, 92, 246, 0.1),
                 inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
             border-color: transparent;
             background: linear-gradient(135deg,
-                rgba(15, 23, 42, 0.35) 0%,
+                rgba(12, 10, 26, 0.35) 0%,
                 rgba(30, 41, 59, 0.25) 50%,
-                rgba(14, 165, 233, 0.02) 100%);
+                rgba(139, 92, 246, 0.02) 100%);
         }
 
         .job-header {
@@ -829,12 +869,12 @@
         .job-date {
             color: var(--text-light);
             background: linear-gradient(135deg,
-                rgba(14, 165, 233, 0.1) 0%,
-                rgba(14, 165, 233, 0.05) 100%);
+                rgba(139, 92, 246, 0.1) 0%,
+                rgba(139, 92, 246, 0.05) 100%);
             padding: 6px 16px;
             border-radius: 20px;
             font-size: 0.9rem;
-            border: 1px solid rgba(14, 165, 233, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.2);
             font-weight: 500;
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
@@ -869,7 +909,7 @@
             align-items: center;
             gap: 10px;
             font-weight: 600;
-            text-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
         }
 
         .skill-category ul {
@@ -910,15 +950,15 @@
             display: inline-block;
             padding: 8px 16px;
             background: linear-gradient(135deg,
-                rgba(14, 165, 233, 0.04) 0%,
-                rgba(14, 165, 233, 0.02) 100%);
+                rgba(139, 92, 246, 0.04) 0%,
+                rgba(139, 92, 246, 0.02) 100%);
             color: var(--primary);
             border-radius: 100px;
             font-size: 0.9rem;
             font-weight: 500;
             margin-right: 10px;
             margin-bottom: 10px;
-            border: 1px solid rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.1);
             backdrop-filter: blur(3px);
             -webkit-backdrop-filter: blur(3px);
             box-shadow:
@@ -930,11 +970,43 @@
         .pill:hover {
             transform: translateY(-1px);
             box-shadow:
-                0 4px 12px 0 rgba(14, 165, 233, 0.2),
+                0 4px 12px 0 rgba(139, 92, 246, 0.2),
                 inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
             background: linear-gradient(135deg,
-                rgba(14, 165, 233, 0.2) 0%,
-                rgba(14, 165, 233, 0.1) 100%);
+                rgba(139, 92, 246, 0.2) 0%,
+                rgba(139, 92, 246, 0.1) 100%);
+        }
+
+        /* Tri-color pill variants for Quality/Testing/AI themes */
+        .pill--ai {
+            border-color: rgba(139, 92, 246, 0.25);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.03) 100%);
+        }
+        .pill--testing {
+            color: var(--secondary);
+            border-color: rgba(6, 182, 212, 0.25);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(6, 182, 212, 0.03) 100%);
+        }
+        .pill--quality {
+            color: #10B981;
+            border-color: rgba(16, 185, 129, 0.25);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0.03) 100%);
+        }
+        .pill--testing:hover {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+            box-shadow: 0 4px 12px 0 rgba(6, 182, 212, 0.2);
+        }
+        .pill--quality:hover {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
+            box-shadow: 0 4px 12px 0 rgba(16, 185, 129, 0.2);
+        }
+
+        /* Card left accent border */
+        .card {
+            border-left: 3px solid var(--primary);
+        }
+        .card:hover {
+            border-left-color: var(--secondary);
         }
 
         /* Loading screen */
@@ -1121,15 +1193,19 @@
                 display: none;
             }
 
-            /* iOS-optimized particles - much more subtle */
-            #particles-js {
-                opacity: 0.15; /* Much lower opacity for iOS clarity */
-                display: none; /* Completely hide on mobile for better performance */
+            /* iOS-optimized circuit board - much more subtle */
+            #circuit-board {
+                opacity: 0.15;
+                display: none;
+            }
+
+            .grid-overlay {
+                display: none;
             }
 
             /* iOS-specific fixes for backdrop filters */
             .glass, .card, .project-card {
-                background: rgba(15, 23, 42, 0.9) !important; /* Solid background for iOS */
+                background: rgba(12, 10, 26, 0.9) !important; /* Solid background for iOS */
                 backdrop-filter: none !important; /* Disable blur on iOS */
                 -webkit-backdrop-filter: none !important;
                 border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1137,7 +1213,7 @@
 
             /* iOS-optimized header */
             header {
-                background: rgba(15, 23, 42, 0.95) !important;
+                background: rgba(12, 10, 26, 0.95) !important;
                 backdrop-filter: none !important;
                 -webkit-backdrop-filter: none !important;
                 border: 1px solid rgba(255, 255, 255, 0.15);
@@ -1150,7 +1226,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: rgba(15, 23, 42, 0.98); /* More opaque for iOS */
+                background: rgba(12, 10, 26, 0.98); /* More opaque for iOS */
                 backdrop-filter: none; /* Remove blur for iOS performance */
                 -webkit-backdrop-filter: none;
                 border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -1341,7 +1417,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+                box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
                 cursor: pointer;
                 transition: all 0.3s ease;
                 z-index: 999;
@@ -1413,11 +1489,14 @@
     </div>
 
     <!-- Particles.js container -->
-    <div id="particles-js"></div>
+    <canvas id="circuit-board"></canvas>
+
+    <!-- Grid overlay for tech dashboard look -->
+    <div class="grid-overlay"></div>
 
     <!-- Theme toggle button -->
     <button class="theme-toggle" id="theme-toggle">
-        <i class="fas fa-bug" id="theme-icon"></i>
+        <i class="fas fa-wand-magic-sparkles" id="theme-icon"></i>
     </button>
 
     <!-- Floating navigation dots -->
@@ -1500,14 +1579,14 @@
                 </div>
 
                 <div>
-                    <span class="pill"><i class="fas fa-code"></i> Python</span>
-                    <span class="pill"><i class="fas fa-vial"></i> PyTest</span>
-                    <span class="pill"><i class="fas fa-robot"></i> Automation Framework</span>
-                    <span class="pill"><i class="fas fa-exchange-alt"></i> Data Transformation</span>
-                    <span class="pill"><i class="fas fa-cogs"></i> CI/CD Testing</span>
-                    <span class="pill"><i class="fas fa-arrow-left"></i> Shift-Left Testing</span>
-                    <span class="pill"><i class="fas fa-brain"></i> Claude Code</span>
-                    <span class="pill"><i class="fas fa-magic"></i> Spec-Driven Development</span>
+                    <span class="pill pill--ai"><i class="fas fa-brain"></i> Claude Code</span>
+                    <span class="pill pill--ai"><i class="fas fa-magic"></i> Spec-Driven Development</span>
+                    <span class="pill pill--testing"><i class="fas fa-vial"></i> PyTest</span>
+                    <span class="pill pill--testing"><i class="fas fa-cogs"></i> CI/CD Testing</span>
+                    <span class="pill pill--testing"><i class="fas fa-arrow-left"></i> Shift-Left Testing</span>
+                    <span class="pill pill--quality"><i class="fas fa-robot"></i> Automation Framework</span>
+                    <span class="pill pill--quality"><i class="fas fa-code"></i> Python</span>
+                    <span class="pill pill--quality"><i class="fas fa-exchange-alt"></i> Data Transformation</span>
                 </div>
             </div>
         </header>
@@ -1594,7 +1673,7 @@
             <div class="card fade-in-up">
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3><i class="fas fa-vial"></i> Testing Tools & Frameworks</h3>
+                        <h3><i class="fas fa-vial" style="color: #06B6D4;"></i> Testing Tools & Frameworks</h3>
                         <ul>
                             <li>Python & PyTest</li>
                             <li>Automation Framework Development</li>
@@ -1606,7 +1685,7 @@
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-cogs"></i> Modern Testing Practices</h3>
+                        <h3><i class="fas fa-cogs" style="color: #06B6D4;"></i> Modern Testing Practices</h3>
                         <ul>
                             <li>Shift-Left Testing</li>
                             <li>CI/CD Integration</li>
@@ -1629,7 +1708,7 @@
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-tasks"></i> Test Management</h3>
+                        <h3><i class="fas fa-tasks" style="color: #10B981;"></i> Test Management</h3>
                         <ul>
                             <li>HP Quality Center</li>
                             <li>Rally</li>
@@ -1638,7 +1717,7 @@
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Programming</h3>
+                        <h3><i class="fas fa-code" style="color: #10B981;"></i> Programming</h3>
                         <ul>
                             <li>Python</li>
                             <li>Java</li>
@@ -1843,150 +1922,277 @@
         
     </div>
 
-    <!-- Particles.js Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Circuit Board Script -->
     <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: window.innerWidth <= 768 ? 35 : 50,
-                    density: {
-                        enable: true,
-                        value_area: 1000
-                    }
-                },
-                color: {
-                    value: ['#22C55E', '#EF4444', '#F59E0B', '#3B82F6', '#8B5CF6', '#06B6D4']
-                },
-                shape: {
-                    type: 'circle',
-                    stroke: {
-                        width: 2,
-                        color: '#ffffff'
-                    }
-                },
-                opacity: {
-                    value: 0.6,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 2,
-                        opacity_min: 0.2,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 6,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 3,
-                        size_min: 2,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#10B981',
-                    opacity: 0.3,
-                    width: 1.5
-                },
-                move: {
-                    enable: true,
-                    speed: 1.2,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    out_mode: 'bounce',
-                    bounce: true,
-                    attract: {
-                        enable: true,
-                        rotateX: 600,
-                        rotateY: 1200
+        (function() {
+            const canvas = document.getElementById('circuit-board');
+            const ctx = canvas.getContext('2d');
+            const isMobile = window.innerWidth <= 768;
+
+            const colors = ['#8B5CF6', '#7C3AED', '#06B6D4', '#10B981', '#A78BFA', '#3B82F6'];
+            const nodeCount = isMobile ? 40 : 80;
+            const traceCount = isMobile ? 15 : 30;
+
+            let nodes = [];
+            let traces = [];
+            let pulses = [];
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                initCircuit();
+            }
+
+            function initCircuit() {
+                nodes = [];
+                traces = [];
+                pulses = [];
+
+                // Create grid-snapped nodes (circuit boards have orderly layouts)
+                const gridSize = isMobile ? 60 : 50;
+                const cols = Math.ceil(canvas.width / gridSize);
+                const rows = Math.ceil(canvas.height / gridSize);
+                const gridPoints = [];
+
+                for (let r = 0; r < rows; r++) {
+                    for (let c = 0; c < cols; c++) {
+                        gridPoints.push({
+                            x: c * gridSize + gridSize / 2,
+                            y: r * gridSize + gridSize / 2
+                        });
                     }
                 }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: ['grab', 'bubble']
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 200,
-                        line_linked: {
-                            opacity: 0.8
+
+                // Pick random grid points as nodes
+                const shuffled = gridPoints.sort(() => Math.random() - 0.5);
+                for (let i = 0; i < Math.min(nodeCount, shuffled.length); i++) {
+                    const p = shuffled[i];
+                    nodes.push({
+                        x: p.x,
+                        y: p.y,
+                        radius: 2 + Math.random() * 3,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        glow: Math.random() * Math.PI * 2,
+                        glowSpeed: 0.01 + Math.random() * 0.03,
+                        type: Math.random() > 0.7 ? 'square' : 'circle'
+                    });
+                }
+
+                // Create traces (paths between nearby nodes using right-angle segments)
+                for (let i = 0; i < traceCount; i++) {
+                    const a = nodes[Math.floor(Math.random() * nodes.length)];
+                    // Find a nearby node
+                    let closest = null;
+                    let closestDist = Infinity;
+                    for (let j = 0; j < nodes.length; j++) {
+                        if (nodes[j] === a) continue;
+                        const d = Math.hypot(nodes[j].x - a.x, nodes[j].y - a.y);
+                        if (d < 300 && d > 30 && (closest === null || Math.random() > 0.5)) {
+                            closest = nodes[j];
+                            closestDist = d;
                         }
-                    },
-                    bubble: {
-                        distance: 100,
-                        size: 10,
-                        duration: 2,
-                        opacity: 0.8,
-                        speed: 3
-                    },
-                    push: {
-                        particles_nb: 3
                     }
+                    if (!closest) continue;
+
+                    // Build right-angle path segments
+                    const path = [];
+                    path.push({ x: a.x, y: a.y });
+
+                    // Decide: go horizontal first or vertical first
+                    if (Math.random() > 0.5) {
+                        path.push({ x: closest.x, y: a.y });
+                    } else {
+                        path.push({ x: a.x, y: closest.y });
+                    }
+                    path.push({ x: closest.x, y: closest.y });
+
+                    const color = colors[Math.floor(Math.random() * colors.length)];
+                    traces.push({ path, color, width: 0.5 + Math.random() * 1 });
                 }
-            },
-            retina_detect: true
-        });
+
+                // Seed initial pulses
+                for (let i = 0; i < (isMobile ? 5 : 10); i++) {
+                    spawnPulse();
+                }
+            }
+
+            function spawnPulse() {
+                if (traces.length === 0) return;
+                const trace = traces[Math.floor(Math.random() * traces.length)];
+                pulses.push({
+                    trace: trace,
+                    progress: 0,
+                    speed: 0.003 + Math.random() * 0.008,
+                    color: trace.color,
+                    size: 2 + Math.random() * 2,
+                    life: 1
+                });
+            }
+
+            function getPointOnPath(path, t) {
+                // t goes from 0 to 1 across all segments
+                const totalSegments = path.length - 1;
+                const segFloat = t * totalSegments;
+                const segIndex = Math.min(Math.floor(segFloat), totalSegments - 1);
+                const segT = segFloat - segIndex;
+                const p1 = path[segIndex];
+                const p2 = path[segIndex + 1];
+                return {
+                    x: p1.x + (p2.x - p1.x) * segT,
+                    y: p1.y + (p2.y - p1.y) * segT
+                };
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Draw traces (the circuit paths)
+                traces.forEach(trace => {
+                    ctx.beginPath();
+                    ctx.moveTo(trace.path[0].x, trace.path[0].y);
+                    for (let i = 1; i < trace.path.length; i++) {
+                        ctx.lineTo(trace.path[i].x, trace.path[i].y);
+                    }
+                    ctx.strokeStyle = trace.color;
+                    ctx.globalAlpha = 0.12;
+                    ctx.lineWidth = trace.width;
+                    ctx.stroke();
+                });
+
+                ctx.globalAlpha = 1;
+
+                // Draw and update pulses
+                for (let i = pulses.length - 1; i >= 0; i--) {
+                    const p = pulses[i];
+                    p.progress += p.speed;
+
+                    if (p.progress >= 1) {
+                        // Pulse reached end — flash the destination node
+                        const endPt = p.trace.path[p.trace.path.length - 1];
+                        const node = nodes.find(n => n.x === endPt.x && n.y === endPt.y);
+                        if (node) node.glow = 0; // reset glow to peak
+
+                        pulses.splice(i, 1);
+                        spawnPulse();
+                        continue;
+                    }
+
+                    const pt = getPointOnPath(p.trace.path, p.progress);
+
+                    // Glowing pulse dot
+                    ctx.beginPath();
+                    ctx.arc(pt.x, pt.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = 0.9;
+                    ctx.fill();
+
+                    // Outer glow
+                    ctx.beginPath();
+                    ctx.arc(pt.x, pt.y, p.size * 3, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = 0.15;
+                    ctx.fill();
+
+                    // Light up the trace behind the pulse
+                    const trailStart = Math.max(0, p.progress - 0.15);
+                    ctx.beginPath();
+                    const startPt = getPointOnPath(p.trace.path, trailStart);
+                    ctx.moveTo(startPt.x, startPt.y);
+                    // Draw trail in small steps
+                    for (let t = trailStart; t <= p.progress; t += 0.01) {
+                        const tp = getPointOnPath(p.trace.path, Math.min(t, 1));
+                        ctx.lineTo(tp.x, tp.y);
+                    }
+                    ctx.strokeStyle = p.color;
+                    ctx.globalAlpha = 0.5;
+                    ctx.lineWidth = p.trace.width + 1;
+                    ctx.stroke();
+                }
+
+                ctx.globalAlpha = 1;
+
+                // Draw nodes
+                nodes.forEach(node => {
+                    node.glow += node.glowSpeed;
+                    const glowAlpha = 0.3 + 0.3 * Math.sin(node.glow);
+
+                    // Outer glow ring
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.radius * 4, 0, Math.PI * 2);
+                    ctx.fillStyle = node.color;
+                    ctx.globalAlpha = glowAlpha * 0.08;
+                    ctx.fill();
+
+                    // Node body
+                    ctx.globalAlpha = glowAlpha + 0.2;
+                    if (node.type === 'square') {
+                        const s = node.radius * 1.5;
+                        ctx.fillStyle = node.color;
+                        ctx.fillRect(node.x - s, node.y - s, s * 2, s * 2);
+                        ctx.strokeStyle = node.color;
+                        ctx.globalAlpha = glowAlpha + 0.1;
+                        ctx.lineWidth = 0.5;
+                        ctx.strokeRect(node.x - s - 2, node.y - s - 2, s * 2 + 4, s * 2 + 4);
+                    } else {
+                        ctx.beginPath();
+                        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = node.color;
+                        ctx.fill();
+                        // Inner highlight
+                        ctx.beginPath();
+                        ctx.arc(node.x, node.y, node.radius * 0.4, 0, Math.PI * 2);
+                        ctx.fillStyle = '#ffffff';
+                        ctx.globalAlpha = glowAlpha * 0.5;
+                        ctx.fill();
+                    }
+                });
+
+                ctx.globalAlpha = 1;
+                requestAnimationFrame(draw);
+            }
+
+            resize();
+            draw();
+
+            window.addEventListener('resize', resize);
+        })();
 
         // iOS-specific optimizations
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        
+
         if (isIOS) {
             console.log('iOS device detected, applying optimizations...');
-            
-            // Add iOS-specific body class
             document.body.classList.add('ios-device');
-            
-            // Disable particles completely on iOS for better performance
+
             setTimeout(() => {
-                const particlesEl = document.getElementById('particles-js');
-                if (particlesEl) {
-                    particlesEl.style.display = 'none';
-                }
+                const circuitEl = document.getElementById('circuit-board');
+                if (circuitEl) circuitEl.style.display = 'none';
             }, 100);
-            
-            // Force solid backgrounds for better readability
+
             setTimeout(() => {
                 const glassElements = document.querySelectorAll('.glass, .card, .project-card, header, .contact-section');
                 glassElements.forEach(el => {
-                    el.style.background = 'rgba(15, 23, 42, 0.95)';
+                    el.style.background = 'rgba(12, 10, 26, 0.97)';
                     el.style.backdropFilter = 'none';
                     el.style.webkitBackdropFilter = 'none';
                     el.style.border = '1px solid rgba(255, 255, 255, 0.2)';
                 });
-                
-                // Enhance text contrast for iOS
+
                 const textElements = document.querySelectorAll('h1, h2, h3, .section-title');
                 textElements.forEach(el => {
                     el.style.color = '#FFFFFF';
                     el.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.8)';
                 });
-                
-                // Fix mobile navigation background
+
                 const mobileNav = document.querySelector('.mobile-nav');
                 if (mobileNav) {
-                    mobileNav.style.background = 'rgba(15, 23, 42, 0.98)';
+                    mobileNav.style.background = 'rgba(12, 10, 26, 0.98)';
                     mobileNav.style.backdropFilter = 'none';
                     mobileNav.style.webkitBackdropFilter = 'none';
                 }
             }, 500);
-            
-            // Simplify animations for iOS performance
+
             const iosStyle = document.createElement('style');
             iosStyle.textContent = `
                 .ios-device * {
@@ -2000,7 +2206,7 @@
                     opacity: 1 !important;
                     transform: none !important;
                 }
-                .ios-device #particles-js {
+                .ios-device #circuit-board {
                     display: none !important;
                 }
             `;
@@ -2078,9 +2284,9 @@
         // Typewriter effect (enhanced)
         const titles = [
             "Lead Software Test Engineer",
-            "AI-Enhanced Test Automation Expert", 
-            "Agile Testing & QA Professional",
-            "AI-Powered Testing Specialist"
+            "AI-Powered Test Automation with Claude Code",
+            "Spec-Driven Development Expert",
+            "Quality Engineering & AI Innovation"
         ];
 
         let titleIndex = 0;
@@ -2129,7 +2335,7 @@
 
             // Update icon
             const icon = document.getElementById('theme-icon');
-            icon.className = newTheme === 'light' ? 'fas fa-vial' : 'fas fa-bug';
+            icon.className = newTheme === 'light' ? 'fas fa-sun' : 'fas fa-wand-magic-sparkles';
 
             // Store preference
             localStorage.setItem('theme', newTheme);
@@ -2140,7 +2346,7 @@
             const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
             const icon = document.getElementById('theme-icon');
-            icon.className = savedTheme === 'light' ? 'fas fa-vial' : 'fas fa-bug';
+            icon.className = savedTheme === 'light' ? 'fas fa-sun' : 'fas fa-wand-magic-sparkles';
 
             // Start typewriter effect
             typeWriter();
