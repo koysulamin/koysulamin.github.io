@@ -624,26 +624,6 @@
             padding: 3px;
         }
 
-        .profile-badge {
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
-            background: var(--bg-soft);
-            border: 1px solid var(--border-strong);
-            border-radius: var(--radius-full);
-            padding: 6px 12px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: var(--shadow-md);
-            backdrop-filter: blur(10px);
-        }
-
-        .profile-badge i { color: var(--primary); }
-
         @media (max-width: 880px) {
             .profile-image {
                 width: 200px;
@@ -953,10 +933,9 @@
             transform: translateY(-3px);
         }
 
-        .bento-card-lg { grid-column: span 3; grid-row: span 2; }
+        .bento-card-lg { grid-column: span 3; }
         .bento-card-md { grid-column: span 3; }
         .bento-card-sm { grid-column: span 2; }
-        .bento-card-sm-tall { grid-column: span 2; grid-row: span 2; }
 
         @media (max-width: 900px) {
             .bento {
@@ -965,10 +944,8 @@
             }
             .bento-card-lg,
             .bento-card-md,
-            .bento-card-sm,
-            .bento-card-sm-tall {
+            .bento-card-sm {
                 grid-column: span 2;
-                grid-row: auto;
             }
         }
 
@@ -1042,24 +1019,9 @@
             pointer-events: none;
         }
 
-        .bento-card-featured .bento-title {
-            font-size: 1.2rem;
-        }
-
-        /* Make the featured card's list expand to fill vertical space */
-        .bento-card-featured .bento-list {
-            flex: 1;
-            justify-content: space-around;
-        }
-
-        .bento-card-featured .bento-list li {
-            font-size: 0.94rem;
-            padding: 4px 0 4px 14px;
-        }
-
-        /* Subtle footer tag — turns whitespace into intentional breathing room */
+        /* Footer pinned to bottom so list items stay formatted like the other cards */
         .bento-featured-footer {
-            margin-top: 16px;
+            margin-top: auto;
             padding-top: 14px;
             border-top: 1px dashed rgba(167, 139, 250, 0.18);
             display: flex;
@@ -1522,10 +1484,6 @@
                     <div class="profile-image">
                         <img src="koysulPic.jpg" alt="Koysul Amin">
                     </div>
-                    <div class="profile-badge">
-                        <i class="fas fa-location-dot"></i>
-                        New York City
-                    </div>
                 </div>
             </div>
 
@@ -1749,6 +1707,19 @@
                     </ul>
                 </div>
 
+                <div class="bento-card bento-card-md">
+                    <div class="bento-icon"><i class="fas fa-server"></i></div>
+                    <h3 class="bento-title">Platforms &amp; Systems</h3>
+                    <ul class="bento-list">
+                        <li>Amazon AWS</li>
+                        <li>Oracle WebLogic Server</li>
+                        <li>Apache Tomcat</li>
+                        <li>Windows</li>
+                        <li>macOS</li>
+                        <li>Linux &amp; Unix</li>
+                    </ul>
+                </div>
+
                 <div class="bento-card bento-card-sm">
                     <div class="bento-icon amber"><i class="fas fa-code"></i></div>
                     <h3 class="bento-title">Programming</h3>
@@ -1773,25 +1744,6 @@
                     <ul class="bento-list">
                         <li>Oracle, SQL Server</li>
                         <li>DynamoDB, Redis</li>
-                    </ul>
-                </div>
-
-                <div class="bento-card bento-card-sm">
-                    <div class="bento-icon"><i class="fas fa-server"></i></div>
-                    <h3 class="bento-title">Infrastructure</h3>
-                    <ul class="bento-list">
-                        <li>Amazon AWS</li>
-                        <li>Oracle WebLogic</li>
-                        <li>Apache Tomcat</li>
-                    </ul>
-                </div>
-
-                <div class="bento-card bento-card-sm">
-                    <div class="bento-icon amber"><i class="fas fa-desktop"></i></div>
-                    <h3 class="bento-title">Operating Systems</h3>
-                    <ul class="bento-list">
-                        <li>Windows, macOS</li>
-                        <li>Unix, Linux</li>
                     </ul>
                 </div>
             </div>
